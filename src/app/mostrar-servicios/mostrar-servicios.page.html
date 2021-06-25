@@ -1,0 +1,52 @@
+<ion-header class="formulario">
+    <ion-toolbar>
+        <ion-title class="cajita">
+            <h1 class="apartados">
+                <ion-icon name="arrow-undo-outline" style="zoom: 0.75;" [routerLink]="['/home']"></ion-icon>
+                Lista de Servicios
+            </h1>
+        </ion-title>
+    </ion-toolbar>
+
+    <ion-content class="botonesCentrados">
+        <ion-list>
+            <ion-item lines="inset" *ngFor="let servicio of servicios">
+                <ion-label>
+                    <h5>{{ servicio.decripcion }}</h5>
+                    <h5>{{ servicio.provincia }}</h5>
+                    <h5>{{ servicio.canton }}</h5>
+                    <h5>{{ servicio.distrito }}</h5>
+                </ion-label>
+
+                <div class="item-note">
+                    <ion-icon name="refresh-outline" style="zoom: 2.0;" [routerLink]="['/actualizar-servicios/',servicio.id]"></ion-icon>
+                    <ion-icon name="trash-outline" style="zoom: 2.0;" (click)="eliminaServicio(servicio.id)"></ion-icon>
+                </div>
+            </ion-item>
+        </ion-list>
+        <ion-button type="button" (click)="loadServicio()" color="primary" shape="round">Cargar Servicios</ion-button>
+    </ion-content>
+</ion-header>
+
+
+
+
+
+
+<!--<ion-item lines="inset" *ngFor="let servicio of servicios" ion-item class="botonesCentrados">
+    <ion-label>
+        <h5>{{ servicio.decripcion }}</h5>
+        <h5>{{ servicio.provincia }}</h5>
+        <h5>{{ servicio.canton }}</h5>
+        <h5>{{ servicio.distrito }}</h5>
+    </ion-label>
+
+    <div class="item-note">
+        <ion-icon name="refresh-outline" style="zoom: 2.0;" [routerLink]="['/actualizar-servicios/',servicio.id]">
+        </ion-icon>
+        <ion-icon name="trash-outline" style="zoom: 2.0;" (click)="eliminaServicio(servicio.id)"></ion-icon>
+    </div>
+</ion-item>
+
+<ion-button type="button" (click)="loadServicio()" color="primary" shape="full" expand="block">Cargar Servicios
+</ion-button>  -->

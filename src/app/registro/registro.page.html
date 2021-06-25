@@ -1,0 +1,40 @@
+<ion-header class="formulario">
+    <ion-toolbar>
+        <ion-title class="cajita">
+            <h1 class="apartados">
+                <ion-icon name="arrow-undo-outline" style="zoom: 0.75;" [routerLink]="['/home']"></ion-icon>
+                Registro
+            </h1>
+        </ion-title>
+    </ion-toolbar>
+
+    <ion-content class="botonesCentrados">
+        <ion-list lines="full">
+            <ion-item>
+                <ion-label position="floating">Nombre Completo </ion-label>
+                <ion-input [(ngModel)]="nombre" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Teléfono</ion-label>
+                <ion-input [(ngModel)]="telefono" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Nombre de Usuario </ion-label>
+                <ion-input [(ngModel)]="nomUser" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Contraseña </ion-label>
+                <ion-input [(ngModel)]="contrasena" type="password"></ion-input>
+            </ion-item>
+
+            <ion-row>
+                <ion-col>
+                    <ion-button type="button" (click)="Registrarse()" color="primary" shape="full" expand="block">Registrarse</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+    </ion-content>
+</ion-header>

@@ -1,0 +1,46 @@
+<ion-header class="formulario">
+    <ion-toolbar>
+        <ion-title class="cajita">
+            <h1 class="apartados">
+                <ion-icon name="arrow-undo-outline" style="zoom: 0.75;" [routerLink]="['/home']"></ion-icon>
+                Crear Servicio
+            </h1>
+        </ion-title>
+    </ion-toolbar>
+    <div>
+        <ion-item class="botonesCentrados">
+            <ion-label position="floating">Id de tipo </ion-label>
+            <ion-input [(ngModel)]="id_tipo" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item class="botonesCentrados">
+            <ion-label position="floating">Id del usuario</ion-label>
+            <ion-input [(ngModel)]="id_user" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item class="botonesCentrados">
+            <ion-label position="floating">Descripcion del servicio </ion-label>
+            <ion-input [(ngModel)]="decripcion" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item class="botonesCentrados">
+            <ion-label position="floating">Provincia </ion-label>
+            <ion-input [(ngModel)]="provincia" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item class="botonesCentrados">
+            <ion-label position="floating">Canton </ion-label>
+            <ion-input [(ngModel)]="canton" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item class="botonesCentrados">
+            <ion-label position="floating">Distrito </ion-label>
+            <ion-input [(ngModel)]="distrito" type="text"></ion-input>
+        </ion-item>
+
+
+        <ion-button class="botonesAbajo" type="button" (click)="CrearServicio()" color="primary" shape="round" expand="block">Crear
+        </ion-button>
+
+    </div>
+</ion-header>
